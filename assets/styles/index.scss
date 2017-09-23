@@ -1,2 +1,20 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  background-color: blue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 125px;
+  font-family: 'Tangerine', serif;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+  font-family: 'Tangerine', serif;
+  font-size: 50px;
+}
