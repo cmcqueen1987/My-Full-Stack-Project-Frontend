@@ -13,41 +13,68 @@
     </head>
     <body class="container-fluid">
 
-      <h1>My Travel Log</h1>
-      <h3>Sign Up or Sign In to Start Logging your Trips Today!</h3>
+            <form id="sign-up">
+                <fieldset>
+                  <legend></legend>
+                <input type ="text" name = "credentials[email]" placeholder="email">
+                <input type ="password" name = "credentials[password]" placeholder="password">
+                <input type ="password" name = "credentials[password_confirmation]" placeholder="password_confirmation">
+                <input type="submit" name="submit" value="Sign up!">
+</fieldset>
+            </form>
+            <form id="sign-in">
+              <fieldset>
+                  <input type ="text" name = "credentials[email]" placeholder="email">
+                  <input type ="password" name = "credentials[password]" placeholder="password">
+                  <input type="submit" name="submit" value="Sign in!">
+                </fieldset>
+              </form>
+              <fieldset>
+                  <form class="sign-out hidden">
+                    <legend></legend>
+                  <fieldset>
+                    <input type="submit" name="submit" value="Sign out!">
+                  </fieldset>
+                  </form>
+                </fieldset>
+
+                  <form class="change-password hidden">
+                  <fieldset>
+                  <input type ="password" name = "passwords[old]" placeholder="Old Password">
+                  <input type ="password" name = "passwords[new]" placeholder="New Password">
+                  <input type="submit" name="submit" value="Change Password!">
+                  </fieldset>
+                  </form>
 <p id='message'></p>
-      <form id="sign-up">
 
-          <input type ="text" name = "credentials[email]" placeholder="email">
-          <input type ="password" name = "credentials[password]" placeholder="password">
-          <input type ="password" name = "credentials[password_confirmation]" placeholder="password_confirmation">
-          <input type="submit" name="submit" value="Sign up!">
+      <h1>My Travel Log</h1>
+      <h3>Sign Up or Sign In to Start Logging your Countries Today!</h3>
+      <img src="http://travel-babel.com/wp-content/uploads/2010/09/globe.jpg" class="centered" height="350" width="350">
 
-      </form>
-      <form id="sign-in">
-        <fieldset>
+      <button type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#create-country-modal">
+              Add A Country!
+        </button>
+          <div class="modal fade" id="create-country-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Add A Place!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
 
-            <input type ="text" name = "credentials[email]" placeholder="email">
-            <input type ="password" name = "credentials[password]" placeholder="password">
-            <input type="submit" name="submit" value="Sign in!">
-          </fieldset>
-        </form>
-        <fieldset>
-            <form class="sign-out hidden">
-            <fieldset>
-              <input type="submit" name="submit" value="Sign out!">
-            </fieldset>
-            </form>
-          </fieldset>
-
-            <form class="change-password hidden">
-            <fieldset>
-            <input type ="password" name = "passwords[old]" placeholder="Old Password">
-            <input type ="password" name = "passwords[new]" placeholder="New Password">
-            <input type="submit" name="submit" value="Change Password!">
-            </fieldset>
-            </form>
-
+                <div class="modal-body">
+                  <form id="create-country">
+                    <input class="create-country" type="text" name="Add Country" value="" placeholder="Add Country">
+                    <input class="create-country" type="text" name="Add Capital City" value="" placeholder="Add Capital City">
+                    <input class="create-country" type="text" name="Add Continent" value="" placeholder="Add Continent">
+                    <input type="submit" name="submit" value="Add Country To My List!">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
 
     </body>
 </html>

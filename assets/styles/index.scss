@@ -8,7 +8,7 @@ body {
 h1 {
   color: white;
   text-align: center;
-  font-size: 125px;
+  font-size: 100px;
   font-family: 'Tangerine', serif;
 }
 
@@ -21,4 +21,18 @@ h3 {
 
 p {
   color: white;
+}
+
+.btn {
+  position: relative;
+  left: + 45%;
+}
+
+#create-country-modal {
+  text-align: center;
+}
+
+.centered {
+  position: fixed;
+  right: + 36%;
 }

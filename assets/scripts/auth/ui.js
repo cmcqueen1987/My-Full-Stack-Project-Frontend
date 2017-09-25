@@ -27,6 +27,10 @@ const signInSuccess = function (data) {
   $('.sign-out').show()
   $('.change-password').removeClass('hidden')
   $('.sign-out').removeClass('hidden')
+  $('h3').hide()
+  $('.btn').removeClass('hidden')
+  $('.btn').show()
+  $('.centered').hide()
 }
 
 const signInFailure = function (error) {
@@ -43,6 +47,9 @@ const signOutSuccess = function (data) {
   $('#sign-in').show()
   $('.change-password').hide()
   $('.sign-out').hide()
+  $('h3').show()
+  $('.btn').hide()
+  $('.centered').show()
 }
 
 const signOutFailure = function (error) {
