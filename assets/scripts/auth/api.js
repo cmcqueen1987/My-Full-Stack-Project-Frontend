@@ -1,6 +1,6 @@
 'use strict'
 
-const config = require('../config.js')
+const config = require('../config')
 const store = require('../store')
 
 const signUp = function (data) {
@@ -10,7 +10,6 @@ const signUp = function (data) {
     data
   })
 }
-
 const signIn = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/sign-in',
@@ -39,10 +38,9 @@ const signOut = function (data) {
     }
   })
 }
-
 module.exports = {
   signUp,
   signIn,
-  changePassword,
-  signOut
+  signOut,
+  changePassword
 }

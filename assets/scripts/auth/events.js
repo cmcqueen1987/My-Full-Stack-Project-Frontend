@@ -6,49 +6,49 @@ const ui = require('./ui')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  const data = getFormFields(this)
-  // const data = getFormFields(this)
-  console.log(data)
+  console.log('sign-up ran!')
+
+  const data = getFormFields(event.target)
+  // OR const data = getFormFields(this)
+
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
 }
-
 const onSignIn = function (event) {
-  const data = getFormFields(this)
   event.preventDefault()
+  console.log('sign in ran!')
+
+  const data = getFormFields(event.target)
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
 }
 
-const onChangePassword = function onChangePassword (event) {
-  let data = getFormFields(this)
-  console.log(data)
-  event.preventDefault()
-  api.changePassword(data)
-    .then(ui.changePasswordSuccess)
-    .catch(ui.changePasswordFailure)
-}
-
 const onSignOut = function (event) {
   event.preventDefault()
+  console.log('sign out ran')
+
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
 
-const addHandlers = function () {
+const onChangePassword = function (event) {
+  event.preventDefault()
+  console.log('change password ran!')
+
+  const data = getFormFields(event.target)
+  api.changePassword(data)
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordFailure)
+}
+const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
-  $('#change-password').on('submit', onChangePassword)
-  $('#sign-out-button').on('click', onSignOut)
+  $('.sign-out').on('submit', onSignOut)
+  $('.change-password').on('submit', onChangePassword)
 }
-
 module.exports = {
-  onSignUp,
-  onSignIn,
-  onChangePassword,
-  onSignOut,
   addHandlers
 }
