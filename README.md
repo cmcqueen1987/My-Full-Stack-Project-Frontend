@@ -2,8 +2,8 @@
 
 <h2>By Charles McQueen (WDI 20)</h2>
 
-<h3>Link To Github Backend</h3>
-https://github.com/cmcqueen1987/My-Full-Stack-Project-BackEnd
+<h3>Link To Deployed Site</h3>
+https://cmcqueen1987.github.io/My-Full-Stack-Project-Frontend/
 
 <h3>Game Project Wireframe and ERD</h3>
 https://user-images.githubusercontent.com/29021990/30864492-c4738952-a2a1-11e7-94bd-ccc695d45446.png
