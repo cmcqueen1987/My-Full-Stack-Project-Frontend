@@ -31,6 +31,10 @@ const signInSuccess = function (data) {
   $('.btn').removeClass('hidden')
   $('.btn').show()
   $('.centered').hide()
+  $('.create-country').removeClass('hidden')
+  $('.create-country').show()
+  $('.get-countries').removeClass('hidden')
+  $('.get-countries').show()
 }
 
 const signInFailure = function (error) {
@@ -50,6 +54,8 @@ const signOutSuccess = function (data) {
   $('h3').show()
   $('.btn').hide()
   $('.centered').show()
+  $('.create-country').hide()
+  $('.get-countries').hide()
 }
 
 const signOutFailure = function (error) {
