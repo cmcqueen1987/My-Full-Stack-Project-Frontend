@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://cmcqueentravelapp.herokuapp.com',
+    production: 'http://localhost:4741',
     development: 'http://localhost:4741'
   }
 }

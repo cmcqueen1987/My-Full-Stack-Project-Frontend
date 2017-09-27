@@ -1,7 +1,7 @@
 'use strict'
 
 const store = require('../store')
-const index = require('../index')
+// const index = require('../index')
 
 const signUpSuccess = function (data) {
   console.log(data)
