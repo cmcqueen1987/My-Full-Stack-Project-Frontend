@@ -56,6 +56,7 @@ const signOutSuccess = function (data) {
   $('.centered').show()
   $('.create-country').hide()
   $('.get-countries').hide()
+  $('.content').hide()
 }
 
 const signOutFailure = function (error) {

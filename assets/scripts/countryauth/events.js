@@ -24,7 +24,7 @@ const onDeleteCountry = function (event) {
   const data = getFormFields(event.target)
   event.preventDefault()
   api.deleteCountry(data.country.id)
-    // .then(onShowAllCountries)
+    .then(onShowAllCountries)
     .catch(ui.deleteCountryFailure)
 }
 
@@ -41,7 +41,7 @@ const onUpdateCountry = function (event) {
 const addHandlers = function () {
   $('#create-country').on('submit', onCreateCountry)
   $('.get-countries').on('click', onShowAllCountries)
-  $('.delete-country').on('submit', onDeleteCountry)
+  $('#remove-country').on('submit', onDeleteCountry)
   $('.update-country').on('submit', onUpdateCountry)
 }
 

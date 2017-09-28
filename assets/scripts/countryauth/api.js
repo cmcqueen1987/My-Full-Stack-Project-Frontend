@@ -52,13 +52,14 @@ const showAllCountries = function (data) {
 const deleteCountry = function (data) {
   console.log('delete')
   return $.ajax({
-    url: config.apiOrigin + '/countries' + data,
+    url: config.apiOrigin + '/countries/' + data,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
     }
   })
 }
+
 module.exports = {
   createCountry,
   deleteCountry,

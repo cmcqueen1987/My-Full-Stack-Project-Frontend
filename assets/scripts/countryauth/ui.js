@@ -1,5 +1,5 @@
 'use strict'
-// const store = require('../store')
+const store = require('../store')
 const countryTemplate = require('../templates/country-list.handlebars')
 
 const createCountrySuccess = (data) => {
@@ -8,18 +8,13 @@ const createCountrySuccess = (data) => {
 const createCountryFailure = () => {
 }
 
-// const showAllCountriesSuccess = (data) => {
-//   store.countries = data.recipes
-//   $('.create-country').val('')
-//
-//   const showCountriesHtml = countryTemplate({ countries: data.countries })
-//   $('h2').append(showCountriesHtml)
-
 const showAllCountriesFailure = () => {
 }
 
-const deleteCountrySuccess = () => {
-
+const deleteCountrySuccess = (data) => {
+  $('.remove-country').on('click', function () {
+    $('.remove-country').hide()
+  })
 }
 
 const deleteCountryFailure = () => {
@@ -33,14 +28,12 @@ const deleteCountryFailure = () => {
 // console.log('hey there')
 // })
 
-// const onCreateCountrySuccess = (data) => {
-// $('.modal-body').hide()
-// }
-
 const showAllCountriesSuccess = (data) => {
+  store.countries = data.countries
   const showCountriesHTML = countryTemplate({countries: data.countries})
   $('.content').append(showCountriesHTML)
-  console.log('heey')
+  $('.content').show()
+  // console.log('heey')
 }
 // $('h4').text(countryNames)
 // $('')
