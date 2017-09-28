@@ -1,13 +1,12 @@
 'use strict'
 
-// const config = require('../config.js')
+const config = require('../config.js')
 const store = require('../store')
-const app = require('../app.js')
 
 const createCountry = function (data) {
-  console.log('create entry in api running')
+  console.log('create')
   return $.ajax({
-    url: app.host + '/countries',
+    url: config.apiOrigin + '/countries',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -16,10 +15,10 @@ const createCountry = function (data) {
   })
 }
 
-const updateCountry = function (data, id) {
-  console.log('update entry in api running')
+const updateCountry = function (data) {
+  console.log('update')
   return $.ajax({
-    url: app.host + '/countries/' + id,
+    url: config.apiOrigin + '/countries/' + data.country.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -28,21 +27,32 @@ const updateCountry = function (data, id) {
   })
 }
 
-const showAllCountries = function () {
-  console.log('view in api running')
+const showAllCountries = function (data) {
+  console.log('view')
   return $.ajax({
-    url: app.host + '/countries',
+    url: config.apiOrigin + '/countries',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    }
+    },
+    data
   })
 }
 
+// const index = function () {
+//   console.log('view')
+//   return $.ajax({
+//     url: config.apiOrigin + '/countries',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=' + store.user.token
+//     }
+//   })
+// }
 const deleteCountry = function (data) {
-  console.log('delete  in api running')
+  console.log('delete')
   return $.ajax({
-    url: app.host + '/countries/' + data,
+    url: config.apiOrigin + '/countries' + data,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + store.user.token
