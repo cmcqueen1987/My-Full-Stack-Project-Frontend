@@ -1,0 +1,11 @@
+{{#each countries as |country|}}
+
+<ul data-id="{{country.id}}">
+  <li> name: {{country.name}}"</li>
+  <li> continent: {{country.continent}}</li>
+  <li>capitalcity: {{country.capital_city}}</li>
+
+<li> <button class="remove-country">Remove Country</button></li>
+<li> <button class="edit-country">Edit Country</button></li>
+</ul>
+{{/each}}
