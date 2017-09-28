@@ -53,9 +53,8 @@
       <img src="http://travel-babel.com/wp-content/uploads/2010/09/globe.jpg" class="centered" height="350" width="350">
 
 
-      <button type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#create-country-modal">
-             Add A Country!
-        </button>
+
+
           <div class="modal fade" id="create-country-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -68,9 +67,9 @@
 
                 <div class="modal-body">
                   <form id="create-country">
-                    <input class="create-country" type="text" name="Add Country" value="" placeholder="Add Country">
-                    <input class="create-country" type="text" name="Add Capital City" value="" placeholder="Add Capital City">
-                    <input class="create-country" type="text" name="Add Continent" value="" placeholder="Add Continent">
+                    <input class="create-country" type="text" name="country[name]" value="" placeholder="Add Country">
+                    <input class="create-country" type="text" name="country[capital_city]" value="" placeholder="Add Capital City">
+                    <input class="create-country" type="text" name="country[continent]" value="" placeholder="Add Continent">
                     <input type="submit" name="submit" value="Add Country To My List!">
                   </form>
                 </div>
@@ -78,9 +77,16 @@
             </div>
           </div>
 
-          <button type="button" class="btn btn-primary hidden get-countries"  data-toggle="modal" data-target="#get-countries-modal">
-                 Get All Countries!
-            </button>
+
+<div class ="container">
+  <button type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#create-country-modal">
+         Add A Country!
+    </button>
+    <button type="button" class="btn btn-primary hidden get-countries"  data-toggle="modal" data-target="#get-countries-modal">
+           Get All Countries!
+      </button>
+    <div id="content" class="content">
+    </div>
 
 
 
