@@ -4,7 +4,7 @@ const config = require('../config.js')
 const store = require('../store')
 
 const createCountry = function (data) {
-  console.log('create')
+  // console.log('create')
   return $.ajax({
     url: config.apiOrigin + '/countries',
     method: 'POST',
@@ -16,7 +16,7 @@ const createCountry = function (data) {
 }
 
 const updateCountry = function (data) {
-  console.log('update')
+  // console.log('update')
   return $.ajax({
     url: config.apiOrigin + '/countries/' + data.country.id,
     method: 'PATCH',
@@ -28,7 +28,7 @@ const updateCountry = function (data) {
 }
 
 const showAllCountries = function (data) {
-  console.log('view')
+  // console.log('view')
   return $.ajax({
     url: config.apiOrigin + '/countries',
     method: 'GET',
@@ -50,7 +50,7 @@ const showAllCountries = function (data) {
 //   })
 // }
 const deleteCountry = function (data) {
-  console.log('delete')
+  // console.log('delete')
   return $.ajax({
     url: config.apiOrigin + '/countries/' + data,
     method: 'DELETE',
