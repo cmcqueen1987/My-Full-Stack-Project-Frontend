@@ -3,6 +3,7 @@ const store = require('../store')
 const countryTemplate = require('../templates/country-list.handlebars')
 
 const createCountrySuccess = (data) => {
+  $('#create-country').hide()
 }
 
 const createCountryFailure = () => {
@@ -31,16 +32,9 @@ const deleteCountryFailure = () => {
 const showAllCountriesSuccess = (data) => {
   store.countries = data.countries
   const showCountriesHTML = countryTemplate({countries: data.countries})
-  $('.content').append(showCountriesHTML)
+  $('.content').html(showCountriesHTML)
   $('.content').show()
-  // console.log('heey')
 }
-// $('h4').text(countryNames)
-// $('')
-// for (var i = 0; i < data.countries.length; i++) {
-// console.log(data.countries[i].name)
-// }
-// console.log(data)
 
 module.exports = {
   createCountrySuccess,
