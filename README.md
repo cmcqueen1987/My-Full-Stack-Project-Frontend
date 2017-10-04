@@ -55,5 +55,3 @@ My app itself is designed for users to sign up and allow them to create a list o
 
 <h3>Unsolved Problems</h3>
 <li>The delete and update button are non functional</li>
-<li>My list of countries appends (doubles in size)</li>
-<li>Country list is not personal to current user</li>
