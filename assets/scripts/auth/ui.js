@@ -4,14 +4,14 @@ const store = require('../store')
 // const index = require('../index')
 
 const signUpSuccess = function (data) {
-  console.log(data)
-  console.log('Successfully Signed up!')
+  // console.log(data)
+  // console.log('Successfully Signed up!')
   $('#message').text('Successfully Signed Up!')
   $('#sign-up').trigger('reset')
 }
 
 const signUpFailure = function (error) {
-  console.log('not working')
+  // console.log('not working')
   console.error(error)
   $('#message').text('Error on Sign-Up, Please Try Again')
   $('#sign-up').trigger('reset')
@@ -44,8 +44,8 @@ const signInFailure = function (error) {
 }
 
 const signOutSuccess = function (data) {
-  console.log(data)
-  console.log('Successfully Signed Out!')
+  // console.log(data)
+  // console.log('Successfully Signed Out!')
   $('#message').text('Successfully Signed Out!')
   $('#sign-up').show()
   $('#sign-in').show()
@@ -65,8 +65,8 @@ const signOutFailure = function (error) {
 }
 
 const changePasswordSuccess = function (data) {
-  console.log(data)
-  console.log('Successfully Changed Password!')
+  // console.log(data)
+  // console.log('Successfully Changed Password!')
   $('#message').text('Successfully Changed Password!')
   $('.change-password').trigger('reset')
 }

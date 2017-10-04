@@ -5,7 +5,7 @@ const api = require('./api')
 const ui = require('./ui')
 
 const onCreateCountry = function (event) {
-  console.log('Created Country!')
+  // console.log('Created Country!')
   const data = getFormFields(event.target)
   event.preventDefault()
   api.createCountry(data)
@@ -29,9 +29,9 @@ const onDeleteCountry = function (event) {
 }
 
 const onUpdateCountry = function (event) {
-  console.log('update is working')
+  // console.log('update is working')
   const data = getFormFields(event.target)
-  console.log(data)
+  // console.log(data)
   event.preventDefault()
   api.updateCountry(data)
     .then(onShowAllCountries)
@@ -41,7 +41,7 @@ const onUpdateCountry = function (event) {
 const addHandlers = function () {
   $('#create-country').on('submit', onCreateCountry)
   $('.get-countries').on('click', onShowAllCountries)
-  $('#remove-country').on('submit', onDeleteCountry)
+  $('.remove-country').on('submit', onDeleteCountry)
   $('.update-country').on('submit', onUpdateCountry)
 }
 
