@@ -9,6 +9,11 @@ https://cmcqueen1987.github.io/My-Full-Stack-Project-Frontend/
 https://user-images.githubusercontent.com/29021990/30864492-c4738952-a2a1-11e7-94bd-ccc695d45446.png
 https://user-images.githubusercontent.com/29021990/30864499-c86c85e0-a2a1-11e7-9ae5-bfa90a3a2fa7.png
 
+<h3>About My App</h3>
+
+<p>Before finally deciding on an idea for my full-stack project I brainstormed quite a bit in regards to my future and thought about what I wanted to do. I figured that upon completion of WDI20 I would be starting the interview process with companies in the area and decided it would be best to frame my project idea around an industry of interest. For me, traveling has alway been a passion and love of mine so I decided that designing my app around travel could be beneficial especially when it comes to showing my projects to potential employers.
+
+My app itself is designed for users to sign up and allow them to create a list of countries around the world they have traveled to. The user will be promped to click the add a country button and then fill in the correct fields. Once the fields have been filled and the add country button is submitted, the user can then click "Get All Countries" and see all of the countries they have added to their list. A user also has the ability to alter their list by editing their countries as well as delete any countries they may have added by mistake. This is a simple one to many relationship idea (A user can have many countries)</p>
 
 <h3>Steps Taken to Complete the Project</h3>
     <li>Drew up a couple of different wireframes as well as an ERD to prep for my project.</li>
@@ -38,7 +43,7 @@ https://user-images.githubusercontent.com/29021990/30864499-c86c85e0-a2a1-11e7-9
     <li>MDN</li>
     <li>ATOM</li>
 
-<h3>Languages Used to Create Project</h3>
+<h3>Technologies Used to Create Project</h3>
   <li>HTML</li>
   <Li>CSS</Li>
   <li>Javascript</li>
