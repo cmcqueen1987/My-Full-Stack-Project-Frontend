@@ -5,11 +5,11 @@ const api = require('./api')
 const ui = require('./ui')
 
 const onCreateCountry = function (event) {
-  // console.log('Created Country!')
+  console.log('Created Country!')
   const data = getFormFields(event.target)
   event.preventDefault()
   api.createCountry(data)
-    // .then(onShowAllCountries)
+    .then(ui.createCountrySuccess)
     .catch(ui.createCountryFailure)
 }
 
@@ -24,7 +24,7 @@ const onDeleteCountry = function (event) {
   const data = getFormFields(event.target)
   event.preventDefault()
   api.deleteCountry(data.country.id)
-    .then(onShowAllCountries)
+    .then(ui.deleteCountrySuccess)
     .catch(ui.deleteCountryFailure)
 }
 

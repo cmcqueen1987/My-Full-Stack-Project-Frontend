@@ -3,7 +3,8 @@ const store = require('../store')
 const countryTemplate = require('../templates/country-list.handlebars')
 
 const createCountrySuccess = (data) => {
-  $('#create-country').hide()
+  $('#create-country').trigger('reset')
+  // console.log('running')
 }
 
 const createCountryFailure = () => {
@@ -13,9 +14,10 @@ const showAllCountriesFailure = () => {
 }
 
 const deleteCountrySuccess = (data) => {
-  $('.remove-country').on('click', function () {
-    $('.remove-country').hide()
-  })
+  // $('.remove-country').on('click', function () {
+  // $('.remove-country').hide()
+  // })
+// }
 }
 
 const deleteCountryFailure = () => {

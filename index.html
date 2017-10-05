@@ -68,15 +68,18 @@
 
                 <div class="modal-body">
                   <form id="create-country">
-                    <input class="create-country" type="text" name="country[name]" value="" placeholder="Add Country">
-                    <input class="create-country" type="text" name="country[capital_city]" value="" placeholder="Add Capital City">
-                    <input class="create-country" type="text" name="country[continent]" value="" placeholder="Add Continent">
-                    <input class="create-country" type="submit" name="submit" value="Add Country To My List!">
+                    <fieldset>
+                    <input type="text" name="country[name]" value="" placeholder="Add Country">
+                    <input type="text" name="country[capital_city]" value="" placeholder="Add Capital City">
+                    <input type="text" name="country[continent]" value="" placeholder="Add Continent">
+                    <input type="submit" name="submit" value="Add Country To My List!">
+                  </fieldset>
+                  </form>
                     <button type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#create-country-modal">
                            Close
                       </button>
 
-                  </form>
+
                 </div>
               </div>
             </div>
