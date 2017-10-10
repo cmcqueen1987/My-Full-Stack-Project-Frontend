@@ -21,7 +21,7 @@ const onShowAllCountries = function () {
 }
 
 const onDeleteCountry = function (event) {
-  console.log('delete is working!')
+  // console.log('delete is working!')
   const data = getFormFields(event.target)
   event.preventDefault()
   api.deleteCountry($(event.target).data('id'))
@@ -30,7 +30,7 @@ const onDeleteCountry = function (event) {
 }
 
 const onUpdateCountry = function (event) {
-  console.log('update is working')
+  // console.log('update is working')
   const data = getFormFields(event.target)
   // console.log(data)
   event.preventDefault()
@@ -43,7 +43,7 @@ const addHandlers = function () {
   $('#create-country').on('submit', onCreateCountry)
   $('.get-countries').on('click', onShowAllCountries)
   $('.remove-country').on('click', onDeleteCountry)
-  console.log('add run')
+  // console.log('add run')
   $('.update-country').on('submit', onUpdateCountry)
 }
 
