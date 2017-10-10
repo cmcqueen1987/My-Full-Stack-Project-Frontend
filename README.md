@@ -54,4 +54,4 @@ My app itself is designed for users to sign up and allow them to create a list o
 
 
 <h3>Unsolved Problems</h3>
-<li>The delete and update button are non functional</li>
+<li>I think all of the requirements for this project were met</li>
