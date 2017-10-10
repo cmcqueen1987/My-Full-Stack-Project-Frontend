@@ -50,7 +50,7 @@ const showAllCountries = function (data) {
 //   })
 // }
 const deleteCountry = function (data) {
-  // console.log('delete')
+  console.log('delete')
   return $.ajax({
     url: config.apiOrigin + '/countries/' + data,
     method: 'DELETE',

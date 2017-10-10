@@ -4,7 +4,8 @@ const countryTemplate = require('../templates/country-list.handlebars')
 
 const createCountrySuccess = (data) => {
   $('#create-country').trigger('reset')
-  // console.log('running')
+  $('#message').hide()
+  console.log('running')
 }
 
 const createCountryFailure = () => {
@@ -14,8 +15,11 @@ const showAllCountriesFailure = () => {
 }
 
 const deleteCountrySuccess = (data) => {
+  const events = require('./events')
+  events.onShowAllCountries()
   // $('.remove-country').on('click', function () {
   // $('.remove-country').hide()
+  console.log('running!')
   // })
 // }
 }
@@ -36,6 +40,11 @@ const showAllCountriesSuccess = (data) => {
   const showCountriesHTML = countryTemplate({countries: data.countries})
   $('.content').html(showCountriesHTML)
   $('.content').show()
+  const events = require('./events')
+  $('.remove-country').on('click', events.onDeleteCountry)
+  console.log(events)
+  // if (data.countries == '') {
+  // $('#message').text('No countries, please add a country!')
 }
 
 module.exports = {
