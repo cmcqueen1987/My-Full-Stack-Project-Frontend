@@ -84,6 +84,35 @@
               </div>
             </div>
           </div>
+          <div class="modal fade" id="update-country-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Update A Place!</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+
+                <div class="modal-body">
+                  <form id="update-country">
+                    <fieldset>
+                    <input type="hidden" name="country[id]" value="" >
+                    <input type="text" name="country[name]" value="" placeholder="Add Country">
+                    <input type="text" name="country[capital_city]" value="" placeholder="Add Capital City">
+                    <input type="text" name="country[continent]" value="" placeholder="Add Continent">
+                    <input type="submit" name="submit" value="Update Country!">
+                  </fieldset>
+                  </form>
+                    <button type="button" class="btn btn-primary hidden" data-toggle="modal" data-target="#update-country-modal">
+                           Close
+                      </button>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
 
 
 <div class ="container">

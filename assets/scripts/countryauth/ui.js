@@ -4,8 +4,15 @@ const countryTemplate = require('../templates/country-list.handlebars')
 
 const createCountrySuccess = (data) => {
   $('#create-country').trigger('reset')
+  $("#create-country-modal").modal("hide")
+  $(".get-countries").click()
   $('#message').hide()
-  console.log('running')
+}
+
+const updateCountrySuccess = (data) => {
+  $("#update-country-modal").modal("hide")
+  $(".get-countries").click()
+  $('#message').hide()
 }
 
 const createCountryFailure = () => {
@@ -15,25 +22,11 @@ const showAllCountriesFailure = () => {
 }
 
 const deleteCountrySuccess = (data) => {
-  const events = require('./events')
-  events.onShowAllCountries()
-  // $('.remove-country').on('click', function () {
-  // $('.remove-country').hide()
-  console.log('running!')
-  // })
-// }
+  $('.get-countries').click()
 }
 
 const deleteCountryFailure = () => {
 }
-
-// const getFormFields = require(`../../lib/get-form-fields`)
-// console.log('hello')
-
-// $('#create-country').on('submit', function (event) {
-// event.preventDefault()
-// console.log('hey there')
-// })
 
 const showAllCountriesSuccess = (data) => {
   store.countries = data.countries
@@ -42,9 +35,18 @@ const showAllCountriesSuccess = (data) => {
   $('.content').show()
   const events = require('./events')
   $('.remove-country').on('click', events.onDeleteCountry)
-  console.log(events)
-  // if (data.countries == '') {
-  // $('#message').text('No countries, please add a country!')
+  $('.edit-country').on('click', function(event) {
+    $("#update-country input[name='country[id]']").val($(event.target).data("id"))
+    $("#update-country input[name='country[name]']").val($(event.target).data("name"))
+    $("#update-country input[name='country[continent]']").val($(event.target).data("continent"))
+    $("#update-country input[name='country[capital_city]']").val($(event.target).data("capital_city"))
+    $('#update-country-modal').modal("show")
+  })
+
+  if (data.countries.length === 0) {
+    $('#message').text('No countries, please add a country!')
+    $('#message').show()
+  }
 }
 
 module.exports = {
@@ -53,5 +55,6 @@ module.exports = {
   showAllCountriesSuccess,
   showAllCountriesFailure,
   deleteCountrySuccess,
-  deleteCountryFailure
+  deleteCountryFailure,
+  updateCountrySuccess,
 }
