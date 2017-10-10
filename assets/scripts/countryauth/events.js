@@ -47,5 +47,5 @@ module.exports = {
   addHandlers,
   onDeleteCountry,
   onShowAllCountries,
-  onUpdateCountry,
+  onUpdateCountry
 }
